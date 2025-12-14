@@ -1,0 +1,257 @@
+/* RESET & BASE */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    overflow-x: hidden;
+}
+
+/* NAVIGATION MENU */
+.menu {
+    width: 100%;
+    padding: 15px 5%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(255, 215, 0, 0.7);
+    backdrop-filter: blur(3px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+/* Logo */
+.leftlogo img {
+    width: 70px;
+    height: auto;
+}
+
+/* Navigation Links */
+.list ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.list ul a {
+    text-decoration: none;
+}
+
+.list li {
+    color: #007236;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.list li:hover {
+    color: black;
+}
+
+/* PAGE 1 (Header Image) */
+.page1 {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    margin-top: 100px; /* pushes content below fixed nav */
+}
+
+.page1 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* HISTORY SECTION */
+.history {
+    width: 100%;
+    background: #007236;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.left,
+.right {
+    flex: 1 1 500px;
+    min-height: 400px;
+}
+
+.left img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.right {
+    padding: 30px;
+}
+
+.right h2,
+.right h3,
+.right p {
+    color: #f6eb13;
+    text-align: center;
+}
+
+/* INFRASTRUCTURE SECTION */
+.infrastructure {
+    width: 100%;
+    padding: 60px 5%;
+    background: #f6eb13 url('drone.png') center/cover no-repeat;
+}
+
+/* Title */
+.infrastructure h1 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* Card Rows */
+.row1,
+.row2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+}
+
+/* Landmark Cards */
+.newcityhall,
+.arena,
+.kld,
+.sm,
+.kadiwa,
+.museum,
+.church,
+.volets {
+    width: 250px;
+    background: #007236;
+    border-radius: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.newcityhall:hover,
+.arena:hover,
+.kld:hover,
+.sm:hover,
+.kadiwa:hover,
+.museum:hover,
+.church:hover,
+.volets:hover {
+    transform: scale(1.05);
+}
+
+.infrastructure .newcityhall img,
+.infrastructure .arena img,
+.infrastructure .kld img,
+.infrastructure .sm img,
+.infrastructure .kadiwa img,
+.infrastructure .museum img,
+.infrastructure .church img,
+.infrastructure .volets img {
+    width: 90%;
+    margin-top: 15px;
+    border-radius: 10px;
+}
+
+.infrastructure h3 {
+    margin-top: 20px;
+    color: #f6eb13;
+}
+
+.infrastructure a {
+    text-decoration: none;
+    color: #f6eb13;
+    font-weight: bold;
+}
+
+/* FOOTER */
+.footer {
+    background: #007236;
+    padding: 20px 5%;
+}
+
+.footer ul {
+    list-style: none;
+    text-align: center;
+}
+
+.footer ul a {
+    text-decoration: none;
+}
+
+.footer li {
+    color: black;
+    padding: 10px 0;
+    font-weight: 600;
+    transition: .3s;
+}
+
+.footer li:hover {
+    color: #f6eb13;
+}
+
+/* ---------------------------------- */
+/* RESPONSIVE BREAKPOINTS */
+/* ---------------------------------- */
+
+/* TABLET */
+@media (max-width: 900px) {
+    .menu {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .list ul {
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+
+    .page1 img {
+        object-position: center;
+    }
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+    .leftlogo img {
+        width: 55px;
+    }
+
+    .menu {
+        padding: 10px;
+    }
+
+    .list ul {
+        gap: 10px;
+        font-size: 14px;
+    }
+
+    .right h2 {
+        font-size: 20px;
+    }
+
+    .right p {
+        font-size: 14px;
+        text-align: justify;
+    }
+
+    .newcityhall,
+    .arena,
+    .kld,
+    .sm,
+    .kadiwa,
+    .museum,
+    .church,
+    .volets {
+        width: 90%;
+        max-width: 300px;
+    }
+}

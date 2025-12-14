@@ -1,0 +1,162 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.menu {
+    height: 100px;
+    display: flex;
+    justify-content: space-between; /* spread logo and menu */
+    align-items: center;
+    padding: 0 2%; /* responsive padding */
+    position: fixed; /* stay on top */
+    z-index: 100;
+    background-color: rgba(255, 215, 0, 0.7);
+    backdrop-filter: blur(2px);
+    width: 100%;
+}
+
+.leftlogo img {
+    height: 80px;
+    width: 80px;
+}
+
+.menu ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem; /* space between menu items */
+}
+
+.menu li {
+    color: #007236;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.menu li:hover {
+    color: black;
+}
+
+.page1 {
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.page1 img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transform: scale(1.5);
+}
+
+.history {
+    display: flex;
+    flex-wrap: wrap; /* allow stacking on small screens */
+    height: 100vh;
+    background-color: #007236;
+}
+
+.left, .right {
+    flex: 1 1 50%; /* take half of the width, shrink if needed */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    padding: 1rem;
+}
+
+.left img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.right h2, .right h3, .right p {
+    color: #f6eb13;
+    text-align: center;
+    margin: 1rem;
+}
+
+.infrastructure {
+    background-color: #f6eb13;
+    padding: 2rem 1rem;
+}
+
+.infrastructure h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.infrastructure .card {
+    width: 100%;
+    max-width: 250px;
+    background-color: #007236;
+    border-radius: 20px;
+    margin: 1rem;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.infrastructure .card:hover {
+    transform: scale(1.05);
+}
+
+.infrastructure .card img {
+    width: 100%;
+    height: auto;
+}
+
+.infrastructure .card h3, .infrastructure .card a {
+    text-align: center;
+    color: #f6eb13;
+    margin: 0.5rem 0;
+    text-decoration: none;
+}
+
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.footer {
+    background-color: #007236;
+    color: #f6eb13;
+    text-align: left;
+    padding: 0.5rem 2%;
+}
+
+@media screen and (max-width: 768px) {
+    .left, .right {
+        flex: 1 1 100%; /* stack left and right on small screens */
+    }
+
+    .menu ul {
+        flex-direction: column;
+        gap: 1rem;
+        position: absolute;
+        top: 100px;
+        right: 0;
+        background-color: rgba(255, 215, 0, 0.9);
+        width: 200px;
+        display: none; /* you can add a toggle for mobile menu */
+    }
+
+    .cards-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .infrastructure .card {
+        max-width: 90%;
+    }
+}

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>City of Dasmariñas</title>
+    <link rel="stylesheet" href="appointment.css"> 
+    <script src="appointment.js" defer></script>
+</head>
+<body>
+    <div class="menu">
+        <div class="leftlogo">
+            <a href="MAIN.html"><img src="1ee682f9-5e27-4d44-852f-e48aea5d5cdb.png" alt="logo"></a>
+        </div>
+        <div class="list">
+            <ul>
+                <a href="MAIN.html"><li>Home</li></a>
+                <a href="CONTACTS.html"><li>Emergency Contacts</li></a>
+                <a href="INQUIRIES.html"><li>Inquiries</li></a>
+                <a href="#"><li>Barangay's</li></a>
+                <a href="#"><li>Institutes</li></a>
+            </ul>
+        </div>
+    </div>
+    <div class="header">
+        <img src="new.jpg" alt="new">
+    </div>
+    <div class="content">
+        <h1>Create an appointment</h1>
+        <h3>City of Dasmariñas</h3>
+    </div>
+    <div class="appoint">
+        <form class="form">
+            <input id="name" type="text" placeholder="Name" required><br>
+            <input id="email" type="email" placeholder="Email" required><br>
+            <input id="number" type="text" placeholder="Mobile Number" required maxlength="11" pattern="\d{11}"><br>
+            <select required id="barangay">
+                <option value="">Select Barangay</option>
+                <option value="Burol Main">Burol Main</option>
+                <option value="Burol I">Burol I</option>
+                <option value="Burol II">Burol II</option>
+                <option value="Burol III">Burol III</option>
+                <option value="Datu Esmael">Datu Esmael (Bago-A-Ingud)</option>
+                <option value="Emmanuel Bergado I">Emmanuel Bergado I</option>
+                <option value="Emmanuel Bergado II">Emmanuel Bergado II</option>
+                <option value="Fatima I">Fatima I</option>
+                <option value="Fatima II">Fatima II</option>
+                <option value="Fatima III">Fatima III</option>
+                <option value="H-2">H-2 (Sta. Veronica)</option>
+                <option value="Langkaan I">Langkaan I</option>
+                <option value="Langkaan II">Langkaan II</option>
+                <option value="Luzviminda I">Luzviminda I</option>
+                <option value="Luzviminda II">Luzviminda II</option>
+                <option value="Paliparan I">Paliparan I</option>
+                <option value="Paliparan II">Paliparan II</option>
+                <option value="Paliparan III">Paliparan III</option>
+                <option value="Sabang">Sabang</option>
+                <option value="Salawag">Salawag</option>
+                <option value="Salitran I">Salitran I</option>
+                <option value="Salitran II">Salitran II</option>
+                <option value="Salitran III">Salitran III</option>
+                <option value="Salitran IV">Salitran IV</option>
+                <option value="Salitran V">Salitran V</option>
+                <option value="Salitran VI">Salitran VI</option>
+                <option value="Saint Peter I">Saint Peter I</option>
+                <option value="Saint Peter II">Saint Peter II</option>
+                <option value="Saint Peter III">Saint Peter III</option>
+                <option value="Sampaloc I">Sampaloc I</option>
+                <option value="Sampaloc II">Sampaloc II</option>
+                <option value="Sampaloc III">Sampaloc III</option>
+                <option value="Sampaloc IV">Sampaloc IV</option>
+                <option value="Sampaloc V">Sampaloc V</option>
+                <option value="San Agustin I">San Agustin I</option>
+                <option value="San Agustin II">San Agustin II</option>
+                <option value="San Agustin III">San Agustin III</option>
+                <option value="San Andres I">San Andres I</option>
+                <option value="San Andres II">San Andres II</option>
+                <option value="San Antonio de Padua I">San Antonio de Padua I</option>
+                <option value="San Antonio de Padua II">San Antonio de Padua II</option>
+                <option value="San Francisco I">San Francisco I</option>
+                <option value="San Francisco II">San Francisco II</option>
+                <option value="San Isidro Labrador I">San Isidro Labrador I</option>
+                <option value="San Isidro Labrador II">San Isidro Labrador II</option>
+                <option value="San Jose">San Jose</option>
+                <option value="San Juan">San Juan</option>
+                <option value="San Lorenzo Ruiz I">San Lorenzo Ruiz I</option>
+                <option value="San Lorenzo Ruiz II">San Lorenzo Ruiz II</option>
+                <option value="San Luis I">San Luis I</option>
+                <option value="San Luis II">San Luis II</option>
+                <option value="San Manuel I">San Manuel I</option>
+                <option value="San Manuel II">San Manuel II</option>
+                <option value="San Mateo I">San Mateo I</option>
+                <option value="San Mateo II">San Mateo II</option>
+                <option value="San Miguel I">San Miguel I</option>
+                <option value="San Miguel II">San Miguel II</option>
+                <option value="San Nicolas I">San Nicolas I</option>
+                <option value="San Nicolas II">San Nicolas II</option>
+                <option value="San Roque">San Roque</option>
+                <option value="Santa Cruz I">Santa Cruz I</option>
+                <option value="Santa Cruz II">Santa Cruz II</option>
+                <option value="Santa Cristina I">Santa Cristina I</option>
+                <option value="Santa Cristina II">Santa Cristina II</option>
+                <option value="Santa Fe">Santa Fe</option>
+                <option value="Santa Lucia I">Santa Lucia I</option>
+                <option value="Santa Lucia II">Santa Lucia II</option>
+                <option value="Santa Maria">Santa Maria</option>
+                <option value="Santo Niño I">Santo Niño I</option>
+                <option value="Santo Niño II">Santo Niño II</option>
+                <option value="Zone I">Zone I (Poblacion)</option>
+                <option value="Zone II">Zone II (Poblacion)</option>
+                <option value="Zone III">Zone III (Poblacion)</option>
+                <option value="Zone IV">Zone IV (Poblacion)</option>
+            </select><br>
+            <select id="purpose">
+                <option value="selected" selected>Select a office</option>
+                <option value="mayor">Office of the Mayor</option>
+                <option value="">Office of the Vice Mayor</option>
+                <option value="">Pagamutan ng Dasmariñas</option>
+                <option value="">Office of Business</option>
+            </select><br>
+            <input type="datetime-local" id="calendar">
+        </form>
+    <div>
+        <button id="submit">Submit</button>
+    </div> 
+    <div class="popup" id="popup">
+        <div class="inner" id="inner">
+            <h2>Thank you for submitting!</h2>
+            <p>
+            Your appointment has been sent! Kindly wait for the email for more details.
+            </p>
+            <button class="oks" id="ok">Ok</button>
+        </div>
+    </div>
+    <p id="error">Please fill out the form!</p>
+    </div>
+    <div class="footer">
+        <div class="line">
+            <ul>
+                <a href="MAIN.html"><li>Home</li></a>
+                <a href="#"><li>About the Creator</li></a>
+                <a href="#"><li>Contact with Us!</li></a>
+                <a href="#"><li>Book Dasmariñas Arena</li></a>
+            </ul>
+        </div>
+    </div>    
+</body>
+</html>   
+

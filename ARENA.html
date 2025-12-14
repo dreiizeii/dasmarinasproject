@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>City of Dasmariñas</title>
+    <link rel="stylesheet" href="arena.css"> 
+</head>
+<body>
+    <div class="menu">
+        <div class="leftlogo">
+            <a href="MAIN.html"><img src="1ee682f9-5e27-4d44-852f-e48aea5d5cdb.png" alt="logo"></a>
+        </div>
+        <div class="list">
+            <ul>
+                <a href="MAIN.html"><li>Home</li></a>
+                <a href="CONTACTS.html"><li>Emergency Contacts</li></a>
+                <a href="INQUIRIES.html"><li>Inquiries</li></a>
+                <a href="#"><li>Barangay's</li></a>
+                <a href="#"><li>Institutes</li></a>
+            </ul>
+        </div>
+    </div>
+    <div class="header">
+        <img src="new.jpg" alt="new">
+    </div>
+    <div class="content">
+        <h1>Book the Arena</h1>
+        <h3>City of Dasmariñas</h3>
+    </div>
+    <div class="main">
+        <form class="form">
+            <input type="text" placeholder="Name" id="name" required><br>
+            <input type="email" placeholder="Email" id="email" required><br>
+            <input type="text" placeholder="Phone Number" id="number" required maxlength="11" pattern="\d{11}"><br>
+            <input type="text" placeholder="Name of the Company" id="company" required><br>
+            <input type="datetime-local" id="date">
+        </form>
+    <div>
+        <button id="submit">Submit</button>
+    </div> 
+    <div class="popup" id="popup">
+        <div class="inner" id="inner">
+            <h2>Thank you for submitting!</h2>
+            <p>
+            Your booking has been sent! Keep an eye on your email for more details.
+            </p>
+            <button class="oks" id="ok">Ok</button>
+        </div>
+    </div>
+    <p id="error">Please fill out the form!</p>
+    </div>
+    <div class="footer">
+        <div class="line">
+            <ul>
+                <a href="MAIN.html"><li>Home</li></a>
+                <a href="#"><li>About the Creator</li></a>
+                <a href="#"><li>Contact with Us!</li></a>
+                <a href="#"><li>Book Dasmariñas Arena</li></a>
+            </ul>
+        </div>
+    </div>    
+    <script src="arena.js"></script>
+</body>
+</html>   

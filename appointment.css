@@ -1,0 +1,285 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+*{
+    margin: 0;
+}
+
+.menu {
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    position: absolute;
+    z-index: 100;
+    background-color: rgba(255, 215, 0, 0.7);
+    backdrop-filter: blur(2px);
+    width: 100%;
+}
+
+.leftlogo img {
+    height: 80px;
+    width: 80px;
+    position: relative;
+    right: 200px;
+}
+
+.list li {
+    display: inline;
+    margin: 20px;
+    position: relative;
+    left: 190px;
+    color: #007236;
+    text-decoration: none;
+}
+
+.list ul a{
+    text-decoration: none;
+}
+
+.list li:hover {
+    display: inline;
+    margin: 20px;
+    position: relative;
+    left: 190px;
+    color: black;
+    cursor: pointer;
+}
+
+.header {
+    height: 40vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+.header img{
+    object-fit: cover;
+    position: relative;
+    bottom: 190px;
+}
+
+.content {
+    height: 20vh;
+    width: 100%;
+}
+
+.content h1, h3{
+    margin-left: 80px;
+    position: relative;
+    top: 60px;
+}
+
+h1 {
+    color: #007236;
+}
+
+
+.footer {
+    height: 20vh;
+    width: 100%;
+    position: relative;
+    background-color: #007236;
+}
+
+.footer ul{
+    position: relative;
+    bottom: 7px;
+}
+
+.line ul a{
+    text-decoration: none;
+    position: relative;
+    top: 15px;
+    color: black;
+}
+
+.line ul a li{
+    list-style: none;
+    color: black;
+    padding-top: 10px;
+    font-weight: 600;
+}
+
+.line ul a li:hover{
+    list-style: none;
+    color: #f6eb13;
+    padding-top: 10px;
+    font-weight: 600;
+    width: 300px;
+}
+
+.appoint {
+    height: 80vh;
+    width: 100%;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    left: 65px;
+}
+
+form #name {
+    top: 10px;
+    outline: none;
+    padding: 10px;
+    border: solid #007236 2px;
+    border-radius: 10px;
+    width: 255px;
+    height: 30px;
+}
+
+form #email {
+    outline: none;
+    padding: 10px;
+    border: solid #007236 2px;
+    border-radius: 10px;
+    width: 255px;
+    left: 65px;
+    height: 30px;
+}
+
+form #number {
+    outline: none;
+    padding: 10px;
+    border: solid #007236 2px;
+    border-radius: 10px;
+    width: 255px;
+    left: 65px;
+    height: 30px;
+}
+
+form #barangay {
+    outline: none;
+    padding: 10px;
+    border: solid #007236 2px;
+    border-radius: 10px;
+    width: 280px;
+    left: 65px;
+    height: 50px;
+    cursor: pointer;
+    top: 30px;
+}
+
+form #purpose {
+    outline: none;
+    padding: 10px;
+    border: solid #007236 2px;
+    border-radius: 10px;
+    width: 280px;
+    left: 65px;
+    height: 50px;
+    cursor: pointer;
+    top: 30px;
+}
+
+form #calendar {
+    outline: none;
+    padding: 10px;
+    border: solid #007236 2px;
+    border-radius: 10px;
+    width: 260px;
+    left: 65px;
+    height: 23px;
+    cursor: pointer;
+    top: 30px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+#submit {
+    position: relative;
+    top: 10px;
+    left: 65px;
+    padding: 7px;
+    cursor: pointer;
+    border-radius: 10px;
+    border: #007236 solid 2px;
+    background-color: white;
+    transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+#submit:hover {
+    background-color: #007236;
+    color: white;
+}
+
+#error {
+    opacity: 0;
+    position: absolute;
+    top: 870px;
+    left: 140px;
+    font-style: italic;
+    font-weight: 600;
+    pointer-events: none;
+}
+
+#error.open {
+    opacity: 1;
+    pointer-events: auto; 
+    z-index: 999;
+}
+
+.popup {
+    opacity: 0;
+    background-color: rgba(0, 114, 54, 0.3);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.3s ease-in-out;
+    z-index: 0; 
+    pointer-events: none;
+}
+
+.popup.open {
+    opacity: 1;
+    pointer-events: auto; 
+    z-index: 999;
+}
+
+.inner {
+    opacity: 0;
+    width: 705px;
+    height: 155px;
+    border-radius: 50px;
+    background-color: #007236;
+    text-align: center;
+    position: relative;
+}
+
+.inner.open {
+    opacity: 1;
+    pointer-events: auto; 
+    z-index: 999;
+}
+
+.inner h2, p{
+    position: relative;
+    top: 24px;
+}
+
+.oks {
+    background-color: white;
+    border: none;
+    position: absolute;
+    bottom: 25px;
+    left: 320px;
+    width: 80px;
+    height: 30px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+
+
+
